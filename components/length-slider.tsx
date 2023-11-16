@@ -94,14 +94,15 @@ export function LengthSlider() {
           <Input
             value={password}
             type="text"
+            disabled
             readOnly
-            className="font-bold text-3xl text-whiteish bg-transparent px-0 truncate"
+            className="font-bold text-3xl text-white dark:text-whiteish bg-transparent px-0 truncate border-none"
           />
 
           <Button
             variant="ghost"
             className={`bg-transparent p-0 m-0 ${
-              isCopied ? "text-strongGreen" : "text-whiteish"
+              isCopied ? "text-strongGreen" : "dark:text-whiteish text-white"
             }`}
             onClick={() => {
               handleCopy(password);
@@ -122,7 +123,9 @@ export function LengthSlider() {
         {/* Slider */}
         <div className="flex flex-col gap-4">
           <div className="flex justify-between items-center">
-            <p className="body text-whiteish">Character Length</p>
+            <p className="body text-white dark:text-whiteish">
+              Character Length
+            </p>
             <h6 className="headingL text-strongGreen">{options.length}</h6>
           </div>
           <Slider
@@ -152,10 +155,11 @@ export function LengthSlider() {
                   onCheckedChange={(checked) =>
                     handleCheckboxChange(optionKey, checked)
                   }
+                  className="border-white dark:border-whiteish"
                 />
                 <label
                   htmlFor={key}
-                  className="body text-whiteish cursor-pointer"
+                  className="body text-white dark:text-whiteish cursor-pointer"
                 >
                   Include {key.charAt(0).toUpperCase() + key.slice(1)}
                 </label>
@@ -168,7 +172,7 @@ export function LengthSlider() {
           <p className="body text-darkSlate-foreground">STRENGTH</p>
 
           <div className="flex items-center justify-between gap-2 sm:gap-4">
-            <p className="headingM text-whiteish uppercase">
+            <p className="headingM text-white dark:text-whiteish  uppercase">
               {passwordStrength.label}
             </p>
             <div className="flex gap-1 sm:gap-2">
@@ -184,7 +188,7 @@ export function LengthSlider() {
                         : level.color === "y"
                         ? "border-strongYellow bg-strongYellow"
                         : "border-strongGreen bg-strongGreen"
-                      : "border-whiteish"
+                      : "dark:border-whiteish border-white"
                   }`}
                 />
               ))}

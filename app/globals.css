@@ -59,6 +59,17 @@
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
+    --dark-slate: 248 10% 15%;
+    --dark-slate-foreground: 251 9% 53%;
+
+    --whiteish: 252 11% 91;
+    --blackish: 248 15% 11%;
+
+    --strong-green: 127 100% 82%;
+    --strong-red: 0 91% 63%;
+    --strong-orange: 13 95% 66%;
+    --strong-yellow: 42 91% 68%;
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
