@@ -76,6 +76,7 @@ export function LengthSlider() {
 
   useEffect(() => {
     generatePassword();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [options]);
 
   const strengthScore = calculatePasswordStrength(options);
