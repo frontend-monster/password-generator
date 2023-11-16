@@ -1,16 +1,14 @@
+import type { Metadata } from "next";
+import { JetBrains_Mono } from "next/font/google";
+import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 
-import type { Metadata } from "next";
-import { JetBrains_Mono as FontSans } from "next/font/google";
-
-import "./globals.css";
-
 import { cn } from "@/lib/utils";
 
-export const fontSans = FontSans({
+const jetbrain = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -27,8 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-blackish font-sans antialiased",
-          fontSans.variable
+          "min-h-screen bg-blackish antialiased",
+          jetbrain.className
         )}
       >
         <ThemeProvider

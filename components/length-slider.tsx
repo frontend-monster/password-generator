@@ -82,7 +82,6 @@ export function LengthSlider() {
   const strengthScore = calculatePasswordStrength(options);
   const passwordStrength = determineStrengthLevel(strengthScore);
 
-  console.log(passwordStrength);
   return (
     <section className="flex flex-col gap-6 px-2 sm:px-0 w-full sm:w-[540px]">
       {/* Password */}
